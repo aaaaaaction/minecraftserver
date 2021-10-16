@@ -18,6 +18,7 @@ jobs:
     - name: server
       run: |
         cd /home
+        sudo apt update
         sudo apt install gcloud -y
 
         
