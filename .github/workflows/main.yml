@@ -18,6 +18,6 @@ jobs:
     - name: server
       run: |
         cd /home
-        ls
+        sudo apt install gcloud -y
 
         
