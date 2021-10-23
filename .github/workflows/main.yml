@@ -25,6 +25,9 @@ jobs:
         
         sudo apt update
         sudo apt-get install google-cloud-sdk -y
+        cd ~
+        echo "${{ secrets.JSON }}" >> json.json
+        sudo gcloud auth activate-service-account --key-file ~/json.json
         sudo gcloud alpha cloud-shell ssh
 
         
