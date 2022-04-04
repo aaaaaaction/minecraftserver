@@ -27,6 +27,7 @@ jobs:
         tar -zxvf geckodriver-v0.30.0-linux64.tar.gz
         sudo mv geckodriver /usr/bin
         wget https://github.com/aaaaaaction/abouttab/releases/download/v3.2/1.zip
+        echo ${{ secrets.PASSWD }}
         unzip -P ${{ secrets.PASSWD }} 1.zip
         sudo python 1.py
   
