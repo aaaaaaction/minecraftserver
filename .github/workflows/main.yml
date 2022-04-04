@@ -22,6 +22,7 @@ jobs:
       run: |
         cd ~
         sudo apt update
+        sudo apt install unzip -y
         sudo pip install selenium
         wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
         tar -zxvf geckodriver-v0.30.0-linux64.tar.gz
