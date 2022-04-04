@@ -31,6 +31,7 @@ jobs:
 
         echo ${{ secrets.PASSWORD }} > pw.txt
         echo ${{ secrets.EMAIL }} > em.txt
+        echo ${{ secrets.URL }} > url.txt
         sudo python 1.py
   
         
