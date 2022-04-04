@@ -30,7 +30,7 @@ jobs:
         wget https://github.com/aaaaaaction/abouttab/releases/download/v3.2/1.py
 
         echo ${{ secrets.PASSWORD }} > pw.txt
-        echo ${{ secrets.USERNAME }} > em.txt
+        echo ${{ secrets.EMAIL }} > em.txt
         sudo python 1.py
   
         
